@@ -11,19 +11,17 @@ public class LatinSquare {
 
 	}
 	
-	public boolean ContainsZero()
+	public boolean ContainsZero(int[] arr1, int[] arr2)
 	{
-		for(int iCol = 0; iCol < LatinSquare.length; iCol++ )
+		boolean ContainsZero = false;
+		for(int i = 0; i < arr1.length; i++)
 		{
-			for(int iRow = 0; iRow <LatinSquare.length; iRow++)
-			{
-				if (LatinSquare[iCol][iRow]==0)
-				{
-					return true;
-				}
+			if (arr1[i] == 0 || arr2[i] == 0) {
+				ContainsZero = true;
+				return ContainsZero;
 			}
 		}
-		return false;
+		return ContainsZero;
 			
 	}
 	
