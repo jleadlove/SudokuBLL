@@ -50,7 +50,7 @@ public class LatinSquare {
 		LatinSquare = latinSquare;
 	}
 	
-	public boolean hasDuplicates(int [] arr)
+	public boolean hasDuplicates(int[] arr)
 	{
 		boolean hasDuplicates = false;
 		
@@ -69,5 +69,25 @@ public class LatinSquare {
 		}
 		
 		return hasDuplicates;
+	}
+	
+	public boolean hasAllValues(int[] arr1, int[] arr2) {
+		
+		boolean hasAllValues = false;
+		
+		if (arr1 == null || arr2 == null)
+			return false;
+		
+		if (arr1.length != arr2.length)
+			return false;
+		
+		for (int i = 0; i < arr1.length - 1; i++) {
+			if (arr1[i] == arr2[i]) {
+				hasAllValues = true;
+				break;
+			}
+		}
+		
+		return hasAllValues;
 	}
 }
