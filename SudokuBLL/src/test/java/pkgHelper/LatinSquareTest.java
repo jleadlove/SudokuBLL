@@ -78,5 +78,16 @@ public class LatinSquareTest {
 		int [] arr2 = {4,5,6};
 		assertTrue(Arrays.equals(lq.getRow(1),arr2));
 	}
-	
+	@Test
+	public void containsZeroTest1() {
+		int[][] myArray = {{1,2,3},{2,3,1},{3,1,2}};
+		LatinSquare ls = new LatinSquare(myArray);
+		assertFalse(ls.ContainsZero());
+	}
+	@Test
+	public void containsZeroTest2() {
+		int[][] myArray = {{1,0,3},{2,3,1},{3,1,2}};
+		LatinSquare ls = new LatinSquare(myArray);
+		assertTrue(ls.ContainsZero());
+	}
 }
