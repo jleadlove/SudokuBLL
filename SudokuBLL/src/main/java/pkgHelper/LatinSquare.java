@@ -6,48 +6,19 @@ public class LatinSquare {
 
 	private int[][] LatinSquare;
 
-	public LatinSquare()
-	{
-
-	}
-	
-	public boolean ContainsZero(int[] arr1, int[] arr2)
-	{
-		boolean ContainsZero = false;
-		for(int i = 0; i < arr1.length; i++)
-		{
-			if (arr1[i] == 0 || arr2[i] == 0) {
-				ContainsZero = true;
-				return ContainsZero;
-			}
-		}
-		return ContainsZero;
-			
-	}
-	
-	public boolean doesElementExist(int[] arr, int iValue)
-	{
-		for(int i : arr)
-		{
-			if (i == iValue)
-				return true;
-		}
-		return false;
-	}
-	
 	public LatinSquare(int[][] latinSquare) {
 		super();
 		LatinSquare = latinSquare;
 	}
-	
+
 	public int[][] getLatinSquare() {
 		return LatinSquare;
 	}
-	
+
 	public void setLatinSquare(int[][] latinSquare) {
 		LatinSquare = latinSquare;
 	}
-	
+
 	public boolean hasDuplicates(int[] arr)
 	{
 		boolean hasDuplicates = false;
@@ -68,7 +39,17 @@ public class LatinSquare {
 		
 		return hasDuplicates;
 	}
-	
+
+	public boolean doesElementExist(int[] arr, int iValue)
+	{
+		for(int i : arr)
+		{
+			if (i == iValue)
+				return true;
+		}
+		return false;
+	}
+
 	public boolean hasAllValues(int[] arr1, int[] arr2) {
 		
 		boolean hasAllValues = false;
@@ -88,7 +69,7 @@ public class LatinSquare {
 		
 		return hasAllValues;
 	}
-	
+
 	public int[] getColumn(int iCol) {
 		int[] col = new int[LatinSquare.length];
 		for (int i = 0; i < LatinSquare.length; i++) {
@@ -96,8 +77,26 @@ public class LatinSquare {
 		}
 		return col;
 	}
-	
+
 	public int[] getRow(int iRow) {
 		return LatinSquare[iRow];
+	}
+
+	public boolean isLatinSquare() {
+		return false;
+	}
+	
+	public boolean ContainsZero(int[] arr1, int[] arr2)
+	{
+		boolean ContainsZero = false;
+		for(int i = 0; i < arr1.length; i++)
+		{
+			if (arr1[i] == 0 || arr2[i] == 0) {
+				ContainsZero = true;
+				return ContainsZero;
+			}
+		}
+		return ContainsZero;
+			
 	}
 }
