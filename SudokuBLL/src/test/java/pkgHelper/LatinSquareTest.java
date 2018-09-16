@@ -147,5 +147,15 @@ public class LatinSquareTest {
 		ls.setLatinSquare(myArray);
 		assertTrue(ls.getLatinSquare()==myArray);
 	}
+	
+	
+	@Test
+	public void isLatinSquare_Test1() {
+		int[][] arr = {{1,2,3},{2,3,1},{3,1,2}};
+		LatinSquare ls = new LatinSquare();
+		ls.setLatinSquare(arr);
+		assertTrue(ls.isLatinSquare());
+	}
+
 }
 
