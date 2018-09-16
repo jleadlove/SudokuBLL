@@ -132,29 +132,36 @@ public class LatinSquareTest {
 		assertTrue(ls.hasAllValues(arr1, arr2));
 		assertFalse(ls.hasAllValues(arr1, arr3));
 	}
-	
+
 	@Test
 	public void getLatinSquare() {
 		int[][] myArray = { { 1, 2, 3 }, { 2, 3, 1 }, { 3, 1, 2 } };
 		LatinSquare ls = new LatinSquare(myArray);
-		assertTrue(ls.getLatinSquare()== myArray);
+		assertTrue(ls.getLatinSquare() == myArray);
 	}
-	
+
 	@Test
 	public void setLatinSquare() {
 		LatinSquare ls = new LatinSquare();
 		int[][] myArray = { { 1, 2, 3 }, { 2, 3, 1 }, { 3, 1, 2 } };
 		ls.setLatinSquare(myArray);
-		assertTrue(ls.getLatinSquare()==myArray);
+		assertTrue(ls.getLatinSquare() == myArray);
 	}
-	
-	
+
 	@Test
 	public void isLatinSquare_Test1() {
-		int[][] arr = {{1,2,3},{2,3,1},{3,1,2}};
+		int[][] arr = { { 1, 2, 3 }, { 2, 3, 1 }, { 3, 1, 2 } };
 		LatinSquare ls = new LatinSquare();
 		ls.setLatinSquare(arr);
 		assertTrue(ls.isLatinSquare());
+	}
+
+	@Test
+	public void isLatinSquare_Test2() {
+		int[][] arr = { { 1, 2, 3 }, { 2, 3, 1 }, { 3, 1, 0 } };
+		LatinSquare ls = new LatinSquare();
+		ls.setLatinSquare(arr);
+		assertFalse(ls.isLatinSquare());
 	}
 
 }
