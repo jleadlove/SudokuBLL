@@ -134,14 +134,14 @@ public class LatinSquareTest {
 	}
 
 	@Test
-	public void getLatinSquare() {
+	public void getLatinSquareTest() {
 		int[][] myArray = { { 1, 2, 3 }, { 2, 3, 1 }, { 3, 1, 2 } };
 		LatinSquare ls = new LatinSquare(myArray);
 		assertTrue(ls.getLatinSquare() == myArray);
 	}
 
 	@Test
-	public void setLatinSquare() {
+	public void setLatinSquareTest() {
 		LatinSquare ls = new LatinSquare();
 		int[][] myArray = { { 1, 2, 3 }, { 2, 3, 1 }, { 3, 1, 2 } };
 		ls.setLatinSquare(myArray);
