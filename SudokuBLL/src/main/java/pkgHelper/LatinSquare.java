@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class LatinSquare {
 
-	private int[] LatinSquare;
+	private int[][] LatinSquare;
 
 	public LatinSquare()
 	{
@@ -35,16 +35,16 @@ public class LatinSquare {
 		return false;
 	}
 	
-	public LatinSquare(int[] latinSquare) {
+	public LatinSquare(int[][] latinSquare) {
 		super();
 		LatinSquare = latinSquare;
 	}
 	
-	public int[] getLatinSquare() {
+	public int[][] getLatinSquare() {
 		return LatinSquare;
 	}
 	
-	public void setLatinSquare(int[] latinSquare) {
+	public void setLatinSquare(int[][] latinSquare) {
 		LatinSquare = latinSquare;
 	}
 	
@@ -87,5 +87,17 @@ public class LatinSquare {
 		}
 		
 		return hasAllValues;
+	}
+	
+	public int[] getColumn(int iCol) {
+		int[] col = new int[LatinSquare.length];
+		for (int i = 0; i < LatinSquare.length; i++) {
+			col[i] = LatinSquare[i][iCol];
+		}
+		return col;
+	}
+	
+	public int[] getRow(int iRow) {
+		return LatinSquare[iRow];
 	}
 }
