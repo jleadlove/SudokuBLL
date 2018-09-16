@@ -78,7 +78,7 @@ public class LatinSquareTest {
 		int [] arr2 = {4,5,6};
 		assertTrue(Arrays.equals(lq.getRow(1),arr2));
 	}
-
+	@Test
 	public void containsZeroTest1() {
 		int[][] myArray = {{1,2,3},{2,3,1},{3,1,2}};
 		LatinSquare ls = new LatinSquare(myArray);
@@ -99,5 +99,22 @@ public class LatinSquareTest {
 		assertTrue(ls.doesElementExist(arr1,3));
 		assertFalse(ls.doesElementExist(arr1,4));
 	}
+	@Test
+	public void hasDuplicatesTest1() {
+		int[] arr = {1,2,3,4,5};
+		LatinSquare ls = new LatinSquare();
+		assertFalse(ls.hasDuplicates(arr));
+	}
+	@Test
+	public void hasDuplicatesTest2() {
+		int[] arr = {1,2,3,0,5,0};
+		LatinSquare ls = new LatinSquare();
+		assertTrue(ls.hasDuplicates(arr));
+	}
+	@Test
+	public void hasDuplicatesTest3() {
+		int[] arr = {1,1,2,2,3,3,3};
+		LatinSquare ls = new LatinSquare();
+		assertTrue(ls.hasDuplicates(arr));
 }
 
