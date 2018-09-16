@@ -87,7 +87,23 @@ public class LatinSquare {
 	}
 
 	public boolean isLatinSquare() {
-		return false;
+		if(ContainsZero()==true)
+			return false;
+		for(int i=0;i<LatinSquare.length;i++) {
+			for(int j=0;j<LatinSquare.length;j++) {
+				if(hasDuplicates(getColumn(j))==true || hasDuplicates(getRow(i))==true)
+					return false;
+				if(hasAllValues(getColumn(j),getRow(i))==false)
+					return false;
+			}
+		}
+		for(int i=0;i<LatinSquare.length-1;i++) {
+			for(int j=0;j<LatinSquare.length-1;j++) {
+			if(hasAllValues(getColumn(j),getColumn(j+1))==false || hasAllValues(getRow(i),getRow(i+1))==false)
+				return false;
+			}
+		}
+		return true;
 	}
 	
 	public boolean ContainsZero()
