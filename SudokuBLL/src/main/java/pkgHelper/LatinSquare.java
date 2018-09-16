@@ -121,3 +121,4 @@ public class LatinSquare {
 		return false;	
 	}
 }
+
