@@ -90,4 +90,14 @@ public class LatinSquareTest {
 		LatinSquare ls = new LatinSquare(myArray);
 		assertTrue(ls.ContainsZero());
 	}
+	
+	@Test
+	public void doesElementExistTest() {
+		int[][] myArray = {{1,2,3},{2,3,1},{3,1,2}};
+		int[] arr1 = {1,2,3};
+		LatinSquare ls = new LatinSquare(myArray);
+		assertTrue(ls.doesElementExist(arr1,3));
+		assertFalse(ls.doesElementExist(arr1,4));
+	}
 }
+
