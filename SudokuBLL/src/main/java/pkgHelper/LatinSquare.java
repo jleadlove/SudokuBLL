@@ -6,6 +6,10 @@ public class LatinSquare {
 
 	private int[][] LatinSquare;
 
+	public LatinSquare() {
+		
+	}
+	
 	public LatinSquare(int[][] latinSquare) {
 		super();
 		LatinSquare = latinSquare;
