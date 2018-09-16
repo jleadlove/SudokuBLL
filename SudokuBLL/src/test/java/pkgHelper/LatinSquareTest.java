@@ -122,15 +122,14 @@ public class LatinSquareTest {
 		LatinSquare ls = new LatinSquare();
 		assertTrue(ls.hasDuplicates(arr));
 	}
-	
+
 	@Test
 	public void hasAllValuesTest() {
-		int[] arr1 = {1,2,3};
-		int[] arr2 = {3,1,2};
-		int[] arr3 = {2,3,4};
+		int[] arr1 = { 1, 2, 3 };
+		int[] arr2 = { 3, 1, 2 };
+		int[] arr3 = { 2, 3, 4 };
 		LatinSquare ls = new LatinSquare();
 		assertTrue(ls.hasAllValues(arr1, arr2));
 		assertFalse(ls.hasAllValues(arr1, arr3));
 	}
 }
-
