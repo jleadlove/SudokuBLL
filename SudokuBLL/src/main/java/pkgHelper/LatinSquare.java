@@ -90,17 +90,18 @@ public class LatinSquare {
 		return false;
 	}
 	
-	public boolean ContainsZero(int[] arr1, int[] arr2)
+	public boolean ContainsZero()
 	{
-		boolean ContainsZero = false;
-		for(int i = 0; i < arr1.length; i++)
+		for(int iCol = 0; iCol < LatinSquare.length; iCol++ )
 		{
-			if (arr1[i] == 0 || arr2[i] == 0) {
-				ContainsZero = true;
-				return ContainsZero;
+			for(int iRow = 0; iRow <LatinSquare.length; iRow++)
+			{
+				if (LatinSquare[iCol][iRow]==0)
+				{
+					return true;
+				}
 			}
 		}
-		return ContainsZero;
-			
+		return false;	
 	}
 }
